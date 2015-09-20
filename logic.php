@@ -1,5 +1,5 @@
 <?php
-/* define var and get form data */
+/* define    var and get form data */
 
 if (isset($_POST['length']) > 0){
 	$length = $_POST['length'];
@@ -51,7 +51,7 @@ switch ($length) {
 		array_push($pw[$ranWords(0,1,2,3)]);
 		break;
 	default:
-		echo "Oops";
+		print($pw);
 }
 
 /* generate some random numbers and symbols */
@@ -71,4 +71,4 @@ If ($numbers = true || $symbols = true){
 		$pw = $pw;	
 	}
 
-
+?>
