@@ -32,7 +32,7 @@ $words = array ("pizza", "lasagna", "pasta", "gelato");
 $ranWords = array_rand($words, 4);
 $pw = array();
 
-var_dump($pw, $ranWords); /* this dump shows an empty pw() and "array(4) { [0]=> int(0) [1]=> int(1) [2]=> int(2) [3]=> int(3) }  " which is the correct number, just no actual words */
+/* var_dump($pw, $ranWords);  this dump shows an empty pw() and "array(4) { [0]=> int(0) [1]=> int(1) [2]=> int(2) [3]=> int(3) }  " which is the correct number, just no actual words */
 
 /* generate words for pw generation
    gather desired length of word
