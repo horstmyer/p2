@@ -41,8 +41,11 @@ ini_set('display_errors', 1);
 			<div>
         	<h1>Your New Password:</h1>
             
-            <P class="pw"><?php echo $newpw ?></P>
+            <P class="pw"><?php echo $pw ?></P>
         	</div> 
+            <div>
+            
+            </div>
                  	
  	</div>
    	<!-- begin right column -->
@@ -55,14 +58,21 @@ ini_set('display_errors', 1);
 				<option value=2>2</option>
             	<option value=3>3</option>
             	<option value=4>4</option>            
-   			</select>
-			<div class="form-group checkbox">
-            	<label><br/>
-                	<input type="radio" id="numbers" name="numbers" value="Yes" checked>
-					<!--<input type="checkbox" id="numbers" name="numbers" value="Yes" checked> -->Add numbers?
-				</label>    
-				<label><br/>
-                	<input type="checkbox" name="symbols" name="symbols" value="Yes" checked> Add symbols?
+   			</select><br /><br /><hr>
+			<div>
+            	<br/>
+                <h3>Any Numbers? </h3>
+                <p>Adding a number could make a better password.</p>
+            	<label>
+                	<input type="checkbox" id="numbers" name="numbers" value="Yes" checked>
+					Add numbers?
+				</label> 
+               <br/><hr>
+                <h3>Any Symbols? </h3>
+                <p>Adding a symbol will help too.</p> 
+				<label>
+                	<input type="checkbox" id="symbols" name="symbols" value="Yes" checked> 
+                    Add symbols?
                 </label><br />
                 <!--<label>Choose a Theme: </label><br />
    					<input type="radio" name="city" value="city" checked>Cities
