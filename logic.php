@@ -1,96 +1,67 @@
 <?php
-/* define    var and get form data */
+/* define var and get form data */
 
-if (isset($_POST['length']) && $_POST['length'] > 0) {
- 	$length = $_POST['length'];
-	}else{
-		$length = 4;
+// here is the length giving us how many words the user wants in the pw
+if(isset($_POST['length'])){ 
+	$length = $_POST['length'];
+	echo $length;
 	}
 	
-if (isset($_POST['numbers']) &&
-    $_POST['numbers'] == 'Yes') 
-	{
-    $numbers = true;
-	}else{
-    $numbers = false;
-	}
-	
-	
-if (isset($_POST['symbols']) &&
-    $_POST['symbols'] == 'Yes') 
-	{
-	$symbols = true;	
-	}else{
-	$symbols = false;	
-	}
-	
-$newPw = array();
+//here the user has checked the box or not to add a number to the pw
+if(isset($_POST['number'])){ 
+	$number = $_POST['number'];
+	} else {
+	$number = "no";
+		}
 
-var_dump($length)."<br>";
-var_dump($numbers)."<br>";
-var_dump($symbols)."<br>";
-
-$pw = array();
-
-$words = array("pizza", "lasagna", "pasta", "pecorino", "gelato");
-$ranWords = array_rand($words, 4);
-foreach ($ranWords as $index) {
-    echo $words[$index] . "<br />";
-	}
-
-//echo $words[$ranWords];
-
-
-var_dump($ranWords) . "<br>";
-
-switch ($length) {
-	case 2:
-		array_push($pw, $ranWords[rand(0,1)]);
-		break;
-	case 3:
-		array_push($pw, $ranWords[rand(0,2)]);
-		break;
-	case 4:
-		array_push($pw, $ranWords[rand(0,3)]);
-		break;
-	default:
-		print($pw);
-}
-
-
-var_dump($pw) . "<br>";
-
-
-/* generate some random numbers and symbols */
-$ranNum = mt_rand(1,9);
-
-$someSym = array("!", "@", "#", "%", "&");
-$ranSym = array_rand($someSym);
-//echo $someSym[$ranSym];
-
-
-var_dump($ranNum) . "<br>";
-var_dump($ranSym) . "<br>";
-print_r($ranSym) . "<br>";
-
-If ($numbers = true && $symbols = true){
-	
-		array_push($pw, $ranNum, $ranSym);
-		$pw = implode('|', $pw);
-		
-	}elseif ($numbers != true && $symbols = true) {
-		
-		array_push($pw, $ranSym);
-		$pw = implode('|', $pw);
-		
-	}elseif ($numbers = true && $symbols != true) {
-		
-		array_push($pw, $ranNum);
-		$pw = implode('|', $pw);
-		
+//here the user has checked the box to add a symbol to the pw
+if(isset($_POST['symbol'])){ 
+	$symbol = $_POST['symbol'];
 	}else {
-		
-		$pw = implode('|', $pw);
+	$symbol = "no";
+		}
+//var_dump ($length). "<br />";
+//var_dump ($number). "<br />";
+//var_dump ($symbol). "<br />";
+
+
+//setting these variables to GLOBAL helped solve some in/out of scope issues
+GLOBAL $length;
+GLOBAL $number;
+GLOBAL $symbol;
+
+
+//here are 20+ words as Susan suggested in class 
+$words = array("pizza", "lasagna", "pasta", "pecorino", "gelato", "antipasto", "provolone", "biscotti", "chianti", "barolo", "florence", "rome", "bravo", "carpaccio", "genoa", "mozzarella", "vino", "barratta", "amaretto", "caponata", "sicily");
+// again solving scope issues
+GLOBAl $words;
+
+// here are a list of symbols to add to pw
+$someSym = array("!", "@", "#", "%", "&", "*", "(", ")", "+");
+//again solving scope issues
+GLOBAL $someSym;
+
+//init var
+$pw = '';
+
+//here we loop the list of words ($words) to extract random words.  the number of words extracted shall be the value designated in $length
+//with only 1 parameter just 1 value is returned.
+
+for ($i=0; $i < $length; $i++) {
+    $pw .= $words[array_rand($words)];
+}
+	// if required, add a random number between 1 and 9
+	if( $number == 'Yes' ) {
+		$pw .= rand(0,9);
 	}
-var_dump($pw)."<br>";
-?>
+	
+	//if required, add a random symbol from the list of symbols
+	if( $symbol == 'Yes' ) {
+		$pw .= $someSym[array_rand($someSym)];
+	}
+
+//echo $myarray[0]['email'];
+//print_r(array_values($a));
+
+var_dump ($pw);
+	

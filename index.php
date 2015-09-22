@@ -51,29 +51,31 @@ ini_set('display_errors', 1);
    	<!-- begin right column -->
    	<div class="colright">
    		<h3>Choose # of Words </h3>
-   		<P>Pick 1, 2, 3, or 4.  More words means more security.</P>
+   		<P>Pick from 2 - 6.  More words means more security.</P>
         <form action="index.php" method="post">
    			<label for="length">How Many?&nbsp;</label>
 			<select name="length" id="length">
 				<option value=2>2</option>
             	<option value=3>3</option>
-            	<option value=4>4</option>            
-   			</select><br /><br /><hr>
+            	<option value=4>4</option> 
+                <option value=5>5</option>
+                <option value=6>6</option>           
+		  </select><br /><br /><hr>
 			<div>
             	<br/>
-                <h3>Any Numbers? </h3>
+                <h3>Add a Number? </h3>
                 <p>Adding a number could make a better password.</p>
             	<label>
-                	<input type="checkbox" id="numbers" name="numbers" value="Yes" checked>
-					Add numbers?
-				</label> 
+                	<input type="checkbox" id="number" name="number" value="Yes" checked>
+					Add number?
+			  </label> 
                <br/><hr>
-                <h3>Any Symbols? </h3>
+                <h3>Add a Symbol? </h3>
                 <p>Adding a symbol will help too.</p> 
 				<label>
-                	<input type="checkbox" id="symbols" name="symbols" value="Yes" checked> 
-                    Add symbols?
-                </label><br />
+                	<input type="checkbox" id="symbol" name="symbol" value="Yes" checked> 
+                    Add symbol?
+              </label><br />
                 <!--<label>Choose a Theme: </label><br />
    					<input type="radio" name="city" value="city" checked>Cities
 					<input type="radio" name="car" value="car">Cars
