@@ -52,7 +52,7 @@ ini_set('display_errors', 1);
    	<div class="colright">
    		<h3>Choose # of Words </h3>
    		<P>Pick 1, 2, 3, or 4.  More words means more security.</P>
-        <form action="logic.php" method="post">
+        <form action="index.php" method="post">
    			<label for="length">How Many?&nbsp;</label>
 			<select name="length" id="length">
 				<option value=2>2</option>

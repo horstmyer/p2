@@ -26,38 +26,39 @@ if (isset($_POST['symbols']) &&
 	
 $newPw = array();
 
-//var_dump($length)."<br>";
-//var_dump($numbers)."<br>";
-//var_dump($symbols)."<br>";
+var_dump($length)."<br>";
+var_dump($numbers)."<br>";
+var_dump($symbols)."<br>";
 
-//var_dump($words);
 $pw = array();
 
 $words = array("pizza", "lasagna", "pasta", "pecorino", "gelato");
 $ranWords = array_rand($words, 4);
-foreach ($ranWords as $key => $value) {
-    //echo "$key - <strong>" . $words[$value] . "</strong><br />";
+foreach ($ranWords as $index) {
+    echo $words[$index] . "<br />";
 	}
 
 //echo $words[$ranWords];
 
 
-//var_dump($ranWords)."<br>";
+var_dump($ranWords) . "<br>";
 
 switch ($length) {
 	case 2:
-		array_push($pw, $words[rand(0,1)]);
+		array_push($pw, $ranWords[rand(0,1)]);
 		break;
 	case 3:
-		array_push($pw, $words[rand(0,2)]);
+		array_push($pw, $ranWords[rand(0,2)]);
 		break;
 	case 4:
-		array_push($pw, $words[rand(0,3)]);
+		array_push($pw, $ranWords[rand(0,3)]);
 		break;
 	default:
 		print($pw);
 }
-//var_dump($pw)."<br>";
+
+
+var_dump($pw) . "<br>";
 
 
 /* generate some random numbers and symbols */
@@ -68,21 +69,24 @@ $ranSym = array_rand($someSym);
 //echo $someSym[$ranSym];
 
 
-//var_dump($ranNum)."<br>";
-//var_dump($ranSym)."<br>";
-//print_r($ranSym)."<br>";
+var_dump($ranNum) . "<br>";
+var_dump($ranSym) . "<br>";
+print_r($ranSym) . "<br>";
 
 If ($numbers = true && $symbols = true){
 	
 		array_push($pw, $ranNum, $ranSym);
+		$pw = implode('|', $pw);
 		
 	}elseif ($numbers != true && $symbols = true) {
 		
 		array_push($pw, $ranSym);
+		$pw = implode('|', $pw);
 		
 	}elseif ($numbers = true && $symbols != true) {
 		
 		array_push($pw, $ranNum);
+		$pw = implode('|', $pw);
 		
 	}else {
 		
