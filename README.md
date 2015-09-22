@@ -9,8 +9,8 @@
 * Selectors for:  how many words, use numbers and use symbols.
 
 
-## Screencast Demo:  ##
+## Screencast Demo: http://screencast.com/t/lmOaSlmJl5G  ##
 
-## Details:  Another good challenge!  ##
+## Details:  This project was made possible as a direct result of the unbelieveable patience and expert coaching provided by Alain.  Thank  you.  ##
 
-##No plugins, libraries or outside code.  ##
+##No plugins, libraries or outside code. Just a bunch of sweat, tears and persistence. ##
