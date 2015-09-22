@@ -28,6 +28,7 @@ body {
 	box-shadow: inset 0px 0px;
 	border-bottom: thick double #ffffff;
 	border-radius: 20px;
+	color: #F9F8F8;
 }
 .colleft {
 	width: 200px;
@@ -124,7 +125,7 @@ body {
 	box-shadow: inset 0px 0px;
 	border-bottom: thick double #ffffff;
 	border-radius: 20px;
-	width: 400px;
+	width: 450px;
 	height: 30px;
 	margin-left: auto;
 	margin-right: auto;
