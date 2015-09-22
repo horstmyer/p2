@@ -4,7 +4,7 @@
 // here is the length giving us how many words the user wants in the pw
 if(isset($_POST['length'])){ 
 	$length = $_POST['length'];
-	echo $length;
+	//echo $length;
 	}
 	
 //here the user has checked the box or not to add a number to the pw
@@ -63,5 +63,5 @@ for ($i=0; $i < $length; $i++) {
 //echo $myarray[0]['email'];
 //print_r(array_values($a));
 
-var_dump ($pw);
+//var_dump ($pw);
 	
