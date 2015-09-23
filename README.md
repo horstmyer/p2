@@ -13,4 +13,4 @@
 
 ## Details:  This project was made possible as a direct result of the unbelieveable patience and expert coaching provided by Alain.  Thank  you.  ##
 
-##No plugins, libraries or outside code. Just a bunch of sweat, tears and persistence. ##
+##Comic image credits included.  No plugins, libraries or outside code. Just a bunch of sweat, tears and persistence. ##

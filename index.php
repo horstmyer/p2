@@ -43,8 +43,8 @@ ini_set('display_errors', 1);
             
             <P class="pw"><?php echo $pw ?></P>
         	</div> 
-            <div>
-            
+            <div class="comic">
+            	<img src="http://imgs.xkcd.com/comics/password_strength.png" width="400" height="" alt=""/>	
             </div>
                  	
  	</div>
@@ -84,6 +84,7 @@ ini_set('display_errors', 1);
     		<p><input type="submit"></p>
    			</div>
    		</form>
+        <p class="att" style="font-size: small; font-style: italic;">comic image courtesy of:  <a href="xkcd.com" target="_blank">https://xkcd.com/936/</a></p>
  	</div>
    	<div class="clear"></div>
    	<!-- begin bottom div -->
